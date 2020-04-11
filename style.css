@@ -1,0 +1,94 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #000000;
+}
+header
+{
+    text-align: center;
+    color: whitesmoke;
+}
+.visual
+{
+    text-align: center;
+}
+.pads
+{
+    width: 100%;
+    background-color: #0000ff;
+    display: flex;
+}
+
+.pads > div
+{
+    width: 150px;
+    height: 150px;
+    flex: 1;
+    cursor: pointer;
+}
+.pad
+{
+    position: relative;
+}
+.pad1
+{
+    background-color: #60d394;
+}
+.pad2
+{
+    background-color: #d36060;
+}
+.pad3
+{
+    background-color: #c060d3;
+}
+.pad4
+{
+    background-color: #d3d160;
+}
+.pad5
+{
+    background-color: #6860d3;
+}
+.pad6
+{
+    background-color: #60b2d3;
+}
+
+.bubble
+{
+    position: absolute;
+   /* width: 20px;
+    height: 20px;*/
+    border-radius: 50%;
+    left: 40%;
+    bottom: 0;
+    animation: jump 1.5s ease;
+    z-index: -1;
+    opacity: 0;
+}
+@keyframes jump
+{
+    0%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80%,83%
+    {
+        transform: translateY(-500px);
+        opacity: 0.4;
+    }
+    100%
+    {
+        transform: translateY(-450px);
+        opacity: 0;
+    }
+}
